@@ -1,3 +1,6 @@
+import string
+
+# my original solution
 def checkio(text):
     "The most frequent letter in lower case in a string."
     count = {}
@@ -29,6 +32,17 @@ def checkio(text):
     else:
         return s[0][0]
 
+# the best solution
+def max_count(text):
+    """
+        We iterate through latyn alphabet and count each letter in the text.
+        Then 'max' selects the most frequent letter.
+        For the case when we have several equal letter,
+        'max' selects the first from they.
+    """
+    text = text.lower()
+    return max(string.ascii_lowercase, key=text.count)
+
 data = raw_input("Please input string: ")
-re = checkio(data)
+re = max_count(data)
 print(re)
