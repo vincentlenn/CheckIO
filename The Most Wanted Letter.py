@@ -1,7 +1,7 @@
 import string
 
 # my original solution
-def checkio(text):
+def most_wanted_letter(text):
     "The most frequent letter in lower case in a string."
     count = {}
     string = str.lower(text)
